@@ -14,10 +14,35 @@
     .attribution a { color: hsl(228, 45%, 44%); }
     body {
       background-color: white; 
+      font-family: Poppins, sans-serif; 
     }
-    .section1, .section2, .section3, .section4, .section5 {
-      height: 165px; 
-      width: 240px; 
+    * {
+      box-sizing: border-box;
+    }
+    .column1, .column2, .column3, .column {
+      float: left;
+      width: 500px;
+      padding: 10px;
+      height: 600px;
+    }
+    .grid1 {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .column1 {
+      position: absolute; 
+      left: 120px;
+    }
+    .column2 {
+      position: absolute; 
+      top: 66px; 
+
+    }
+    .column3 {
+      position: absolute; 
+      right: 120px; 
+      bottom: 16px; 
     }
     h1 {
       color: hsl(0, 0%, 98%); 
@@ -45,11 +70,16 @@
     .hr2 {
       color: hsl(0, 78%, 62%); 
       margin-top: 96px; 
-      margin-bottom: 16px; 
+      margin-bottom: 240px;
+      width: 290px; 
+      margin-right: 550px;  
     }
     .hr3 {
       color: yellow; 
       margin-top: 385px; 
+      margin-bottom: 240px;
+      width: 290px; 
+      margin-right: 550px; 
     }
     .hr4 {
       color: hsl(212, 86%, 64%); 
@@ -82,6 +112,12 @@
     .calculating-paragraph2 {
       margin-bottom: 120px; 
     }
+    /*article {
+      width: 550px; 
+      height: 450px; 
+      background: silver;
+      box-shadow: 0 16px 24px 0px hsla(0, 0%, 100%, 0.555);
+    }*/
     /*@media only screen and (min-width: 769px) and (max-width: 992px) {
     .section2, .section5 {
       position: absolute; 
@@ -262,34 +298,18 @@
         padding: 16px; 
       }
     }*/
-    @media only screen and (min-width: 769px) and (max-width: 992px)) {
+    /*@media only screen and (min-width: 769px) and (max-width: 992px)) {
       .grid1 { 
         display: grid; 
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
       }
-    }
-    @media only screen and (min-width: 769px) and (max-width: 992px) {
-      .grid2 {
-        display: grid; 
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-      }
-    }
-    @media only screen and (min-width: 769px) and (max-width: 992px) {
-      .section2 {
+    }*/
+    /*@media only screen and (min-width: 769px) and (max-width: 992px) {
+      .calculator {
         position: absolute; 
-        left: 66px; 
-        bottom: 10px; 
       }
-    }
-    @media only screen and (min-width: 769px) and (max-width: 992px) {
-      .section5 {
-        position: absolute; 
-        left: 996px; 
-        bottom: 45px; 
-      }
-    }
+    }*/
     /*@media only screen and (min-width: 321px) and (max-width: 768px) {
       .littlecard {
         height: 165px; 
@@ -299,7 +319,7 @@
         padding: 16px; 
       }
     }*/
-    @media only screen and (min-width: 321px) and (max-width: 768px) {
+    /*@media only screen and (min-width: 321px) and (max-width: 768px) {
       .grid1 { 
         display: grid; 
         grid-template-columns: auto auto;
@@ -307,26 +327,10 @@
       }
     }
     @media only screen and (min-width: 321px) and (max-width: 768px) {
-      .grid2 {
-        display: grid; 
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+      .calculator {
+        position: absolute;  
       }
-    }
-    @media only screen and (min-width: 321px) and (max-width: 768px) {
-      .section2 {
-        position: absolute; 
-        left: 24px; 
-        bottom: 6px; 
-      }
-    }
-    @media only screen and (min-width: 321px) and (max-width: 768px) {
-      .section5 {
-        position: absolute; 
-        left: 996px; 
-        bottom: 55px; 
-      }
-    }
+    }*/
   </style>
 </head>
 <body>
@@ -339,41 +343,34 @@
   <p>ensure that your project is successful.</p>
   </div>
   <div class="grid1">
-  <div class="section2">
+  <div class="column1">
     <hr class="hr1">
   <h2>Supervisor</h2>
   <p>Monitors activity to identify project</p>
   <p>roadblocks.</p>
   <img src="images/icon-supervisor.svg" class="magnifying-glass">
   </div>
-  <div class="C">
-  <div class="section5">
+  <div class="column">
+    <div class="column2">
+      <hr class="hr2">
+    <h2 class="teambuilder">Team Builder</h2>
+    <p>Scans our talent network to create the</p>
+    <p>optimal team for your project.</p>
+    <img src="images/icon-team-builder.svg" class="wonderful-truly-little-house-to-design">
+      <br/>
+      <hr class="hr3"> 
+      <h2 class="karma">Karma</h2>
+      <p>Regularly evaluates our talent to</p>
+      <p>ensure quality.</p>
+      <img src="images/icon-karma.svg" class="icon-karma">
+    </div>
+    </div>
+  <div class="column3">
     <hr class="hr4">
   <h2 class="calculations">Calculator</h2>
   <p class="calculating-paragraph1">Uses data from past projects to</p>
   <p class="calculating-paragraph2">provide better delivery estimates.</p>
   <img src="images/icon-calculator.svg" class="calculator">
-  </div>
-  </div>
-  </div>
-  <div class="grid2">
-  <div class="TB">
-  <div class="section3">
-    <hr class="hr2">
-  </div>
-  <h2 class="teambuilder">Team Builder</h2>
-  <p>Scans our talent network to create the</p>
-  <p>optimal team for your project.</p>
-  <img src="images/icon-team-builder.svg" class="wonderful-truly-little-house-to-design">
-  </div>
-  <div class="K">
-  <div class="section4">
-    <hr class="hr3"> 
-  </div>
-  <h2 class="karma">Karma</h2>
-  <p>Regularly evaluates our talent to</p>
-  <p>ensure quality.</p>
-  <img src="images/icon-karma.svg" class="icon-karma">
   </div>
   </div>
   </div>
@@ -385,180 +382,6 @@
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
